@@ -1,5 +1,6 @@
 const AddTask = ({setTask,task}) => {
     const handleTask = (e)=>{
+        e.preventDefault()
        const valuee = e.target.value;
        setTask(valuee);
        
@@ -9,11 +10,14 @@ const AddTask = ({setTask,task}) => {
     
     return (
         <div>
+            <form>
             <input 
              type="text"
              value={task}
-             onChange={handleTask}
+             onChange={(e)=>{handleTask(e)}}
              />
+            </form>
+            
              </div>
     );
 };

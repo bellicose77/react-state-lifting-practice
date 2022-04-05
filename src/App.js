@@ -1,14 +1,9 @@
 import './App.css';
-import AddTask from './components/AddTask/AddTask';
-import ShowList from './components/ShowList/ShowList';
-import Totaltask from './components/Totaltask/Totaltask';
-
+import Home from './components/Home/Home';
 function App() {
   return (
     <div className="App">
-     <Totaltask></Totaltask>
-     <ShowList></ShowList>
-     <AddTask></AddTask>
+     <Home></Home>
     </div>
   );
 }

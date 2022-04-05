@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 const AddTask = () => {
     const [taskk,setTaskk] = useState('')
     const handleTask = (e)=>{
+        e.preventDefault();
        setTaskk(e.target.value)
     }
+    console.log(taskk)
     return (
         <div>
             <input type="text"
@@ -13,7 +15,7 @@ const AddTask = () => {
             >
 
             </input>
-            
+
         </div>
     );
 };

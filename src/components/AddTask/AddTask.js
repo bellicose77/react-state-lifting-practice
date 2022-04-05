@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
-
-const AddTask = () => {
-    const [taskk,setTaskk] = useState('')
+const AddTask = ({setTask,task}) => {
     const handleTask = (e)=>{
-        e.preventDefault();
-       setTaskk(e.target.value)
+       const valuee = e.target.value;
+       setTask(valuee);
+       
     }
-    console.log(taskk)
+    console.log(task)
+   
+    
     return (
         <div>
-            <input type="text"
-             placeholder='Add task' 
+            <input 
+             type="text"
+             value={task}
              onChange={handleTask}
-            >
-
-            </input>
-
-        </div>
+             />
+             </div>
     );
 };
 

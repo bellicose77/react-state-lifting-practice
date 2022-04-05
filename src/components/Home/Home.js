@@ -4,13 +4,13 @@ import ShowList from '../ShowList/ShowList';
 import Totaltask from '../Totaltask/Totaltask';
 
 const Home = () => {
-    // const [task,setTask] = useState('')
+    const [task,setTask] = useState('')
     // console.log(task);
     return (
         <div>
             <Totaltask></Totaltask>
             <ShowList></ShowList>
-            <AddTask></AddTask>
+            <AddTask setTask={setTask} task={task}></AddTask>
 
         </div>
     );

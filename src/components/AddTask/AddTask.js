@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const AddTask = ({setTask}) => {
+const AddTask = () => {
+    const [taskk,setTaskk] = useState('')
     const handleTask = (e)=>{
-       const taskk = e.target.value;
-       setTask(taskk);
+       setTaskk(e.target.value)
     }
     return (
         <div>
@@ -12,7 +12,8 @@ const AddTask = ({setTask}) => {
              onChange={handleTask}
             >
 
-             </input>
+            </input>
+            
         </div>
     );
 };

@@ -1,21 +1,27 @@
-const AddTask = ({setTask,task}) => {
+const AddTask = ({task,setTask}) => {
     const handleTask = (e)=>{
-        e.preventDefault()
+       
        const valuee = e.target.value;
-       setTask(valuee);
+       console.log(valuee)
+       setTask(valuee)
+      
        
     }
-    console.log(task)
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+
+    }
+    //console.log(task)
    
     
     return (
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
             <input 
              type="text"
-             value={task}
              onChange={(e)=>{handleTask(e)}}
              />
+             <button>Submit</button>
             </form>
             
              </div>
